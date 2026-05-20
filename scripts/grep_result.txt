@@ -1,0 +1,176 @@
+  const [result, setResult] = useState<ResultData | null>(initialState?.result || null);
+  const [editableScript, setEditableScript] = useState(initialState?.editableScript || initialState?.result?.script || '');
+  const [editablePrompts, setEditablePrompts, undoPrompts, redoPrompts, canUndoPrompts, canRedoPrompts, resetPrompts, pastPrompts, futurePrompts] = useUndoRedo<string>(initialState?.editablePrompts ?? initialState?.result?.aiPrompts ?? '', initialState?.pastPrompts, initialState?.futurePrompts);
+  const [editableKling, setEditableKling, undoKling, redoKling, canUndoKling, canRedoKling, resetKling, pastKling, futureKling] = useUndoRedo<string>(initialState?.editableKling ?? initialState?.result?.klingPrompt ?? '', initialState?.pastKling, initialState?.futureKling);
+  const [editableVeo, setEditableVeo, undoVeo, redoVeo, canUndoVeo, canRedoVeo, resetVeo, pastVeo, futureVeo] = useUndoRedo<string>(initialState?.editableVeo ?? initialState?.result?.veoPrompt ?? '', initialState?.pastVeo, initialState?.futureVeo);
+  const [editableKling1, setEditableKling1, undoKling1, redoKling1, canUndoKling1, canRedoKling1, resetKling1, pastKling1, futureKling1] = useUndoRedo<string>(initialState?.editableKling1 ?? initialState?.result?.klingPrompt1 ?? '', initialState?.pastKling1, initialState?.futureKling1);
+  const [editableVeo1, setEditableVeo1, undoVeo1, redoVeo1, canUndoVeo1, canRedoVeo1, resetVeo1, pastVeo1, futureVeo1] = useUndoRedo<string>(initialState?.editableVeo1 ?? initialState?.result?.veoPrompt1 ?? '', initialState?.pastVeo1, initialState?.futureVeo1);
+  const [editableKling2, setEditableKling2, undoKling2, redoKling2, canUndoKling2, canRedoKling2, resetKling2, pastKling2, futureKling2] = useUndoRedo<string>(initialState?.editableKling2 ?? initialState?.result?.klingPrompt2 ?? '', initialState?.pastKling2, initialState?.futureKling2);
+  const [editableVeo2, setEditableVeo2, undoVeo2, redoVeo2, canUndoVeo2, canRedoVeo2, resetVeo2, pastVeo2, futureVeo2] = useUndoRedo<string>(initialState?.editableVeo2 ?? initialState?.result?.veoPrompt2 ?? '', initialState?.pastVeo2, initialState?.futureVeo2);
+  const [promptAnalysis, setPromptAnalysis] = useState<{ type: 'estimate' | 'anti-ai-slop', result: string } | null>(null);
+  const [prompt1Analysis, setPrompt1Analysis] = useState<{ type: 'estimate' | 'anti-ai-slop', result: string } | null>(null);
+  const [prompt2Analysis, setPrompt2Analysis] = useState<{ type: 'estimate' | 'anti-ai-slop', result: string } | null>(null);
+      result,
+        // If full, try saving without result or history
+          localStorage.setItem('viralShortsState', JSON.stringify({ ...stateToSave, result: null, feedbackHistory: [] }));
+    description, niche, genre, musicalType, preferredSinger, platform, useBypass, algoCuriosity, isDeepAnalysis, isEscalation, spinOffMode, viralBoost50k, result, 
+      result
+    if (!result?.parsedKit?.coverPrompt || !coverGoal.trim()) return;
+      const newPrompt = await refineCoverPromptWithGoal(result.parsedKit.coverPrompt, coverGoal, apiKey);
+        ...result,
+          ...result.parsedKit,
+    if (!result?.parsedKit?.coverPrompt) return;
+      const img = await generateCover(result.parsedKit.coverPrompt, coverAspectRatio, coverReferenceImage || undefined, coverHookText || undefined, pomelli, apiKey);
+      const newPrompt = await forceTextInPrompt(text, apiKey, result?.modelUsed === 'pro' ? 'gemini-1.5-pro' : 'gemini-2.0-flash');
+      const purifiedPrompt = await purifyPromptAntiEmoji(text, apiKey, result?.modelUsed === 'pro' ? 'gemini-1.5-pro' : 'gemini-2.0-flash');
+      const context = result?.analysis || result?.script || '';
+        if (typeof reader.result === 'string') {
+          resolve(reader.result.split(',')[1]);
+        if (parsed.result) {
+          analysisText = parsed.result.analysis || '';
+          if (typeof parsed.result.script === 'string') {
+              const script = safeParseJSON(parsed.result.script);
+              scriptText = parsed.result.script;
+          } else if (parsed.result.script) {
+             scriptText = JSON.stringify(parsed.result.script, null, 2);
+      const analysisData = { type, result: analysisText };
+        if (parsed.result) {
+          if (parsed.result.analysis && typeof parsed.result.analysis === 'object') {
+            analysis = JSON.stringify(parsed.result.analysis, null, 2);
+            analysis = parsed.result.analysis || '';
+          if (typeof parsed.result.script === 'string') {
+              const parsedScript = safeParseJSON(parsed.result.script);
+              script = parsed.result.script;
+          } else if (parsed.result.script) {
+            script = JSON.stringify(parsed.result.script, null, 2);
+            {analysisMode === 'guided-short' && !result && (
+              {!result && !isLoading && (
+              {result && !isLoading && (
+                  key="result"
+                  {(analysisMode === 'trend-hunter' || analysisMode === 'hook-test') && result.trends && result.trends.length > 0 && (
+                        {result.trends.map((trend, index) => (
+                  {result.analysisMode === 'hook-test' && result.hookComparison && (
+                                {result.winner}
+                              <p className="text-xs font-bold text-emerald-500/70 uppercase tracking-widest">Hook {result.winner}</p>
+                              {result.winner === 'A' ? result.scoreA : result.scoreB}
+                            "{result.winner === 'A' ? hookA : hookB}"
+                                {result.winner === 'A' ? 'B' : 'A'}
+                              <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Hook {result.winner === 'A' ? 'B' : 'A'}</p>
+                              {result.winner === 'A' ? result.scoreB : result.scoreA}
+                            "{result.winner === 'A' ? hookB : hookA}"
+                          <Markdown>{String(result.hookComparison || '')}</Markdown>
+                      {result.refinedWinner && (
+                              {result.refinedWinner}
+                              text={result.refinedWinner} 
+                  {(analysisMode === 'viral-hook-bulk' || analysisMode === 'hook-test') && result.bulkHooks && result.bulkHooks.length > 0 && (
+                        {result.bulkHooks.map((hook, index) => (
+                  {result.externalMarketData && result.externalMarketData.status !== 'ERROR' && (
+                          result.externalMarketData.status === 'SUCCESS' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'
+                          {result.externalMarketData.status === 'SUCCESS' ? 'REAL DATA' : 'NO DATA MODE'}
+                      {result.externalMarketData.status === 'SUCCESS' ? (
+                            {result.externalMarketData.marketSummary}
+                            {result.externalMarketData.comparableVideos.slice(0, 4).map((video, idx) => (
+                          {result.externalMarketData.searchQueries && result.externalMarketData.searchQueries.length > 0 && (
+                                {result.externalMarketData.searchQueries.map((q, i) => (
+                  {result.psychologicalAnalysis && (
+                            }}>{String(result.psychologicalAnalysis || '')}</Markdown>
+                  {result.conscienceExamIt && (
+                            }}>{result.conscienceExamIt}</Markdown>
+                  {result.trendHunterReport && (
+                            }}>{result.trendHunterReport}</Markdown>
+                  {result.analysis && result.analysisMode !== 'trend-hunter' && result.analysisMode !== 'hook-test' && (
+                    <div className={`border rounded-2xl p-6 relative ${result.analysisMode === 'anti-ai-slop' ? 'bg-red-500/5 border-red-500/20' : result.analysisMode === 'pensaci-tu' ? 'bg-yellow-500/5 border-yellow-500/20' : 'bg-indigo-500/5 border-indigo-500/20'}`}>
+                          <div className={`p-2 rounded-lg ${result.analysisMode === 'anti-ai-slop' ? 'bg-red-500/20' : result.analysisMode === 'pensaci-tu' ? 'bg-yellow-500/20' : 'bg-indigo-500/20'}`}>
+                            {result.analysisMode === 'anti-ai-slop' ? <ShieldAlert className="w-5 h-5 text-red-400" /> : result.analysisMode === 'pensaci-tu' ? <Sparkles className="w-5 h-5 text-yellow-400" /> : <Target className="w-5 h-5 text-indigo-400" />}
+                          <h3 className={`text-xl font-bold ${result.analysisMode === 'anti-ai-slop' ? 'text-red-100' : result.analysisMode === 'pensaci-tu' ? 'text-yellow-100' : 'text-indigo-100'}`}>
+                            {result.analysisMode === 'anti-ai-slop' ? 'Cura Anti-AI Slop' : result.analysisMode === 'pensaci-tu' ? 'Idea Virale Generata' : 'Analisi Strategica'}
+                          {result.modelUsed && (
+                              result.modelUsed === 'pro' 
+                              {result.modelUsed === 'pro' ? '🧠 Analisi Pro' : '⚡ Analisi Flash'}
+                      {result.technicalVerification && (
+                            <Markdown>{result.technicalVerification}</Markdown>
+                      {result.viralScore && (
+                            className={`group relative flex flex-col items-center justify-center p-6 w-full sm:w-auto sm:min-w-[200px] ${result.analysisMode === 'pensaci-tu' ? 'bg-yellow-900/30 hover:bg-yellow-600/40 border-yellow-500/50 hover:border-yellow-400 shadow-[0_0_30px_rgba(234,179,8,0.2)] hover:shadow-[0_0_50px_rgba(234,179,8,0.4)]' : 'bg-indigo-900/30 hover:bg-indigo-600/40 border-indigo-500/50 hover:border-indigo-400 shadow-[0_0_30px_rgba(99,102,241,0.2)] hover:shadow-[0_0_50px_rgba(99,102,241,0.4)]'} border-2 rounded-2xl transition-all duration-300 transform hover:scale-105`}
+                            <div className={`absolute -top-3 ${result.analysisMode === 'pensaci-tu' ? 'bg-yellow-500 text-yellow-950' : 'bg-indigo-500 text-white'} text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg flex items-center gap-1`}>
+                            <span className={`text-5xl font-black text-transparent bg-clip-text drop-shadow-lg ${result.analysisMode === 'pensaci-tu' ? 'bg-gradient-to-br from-yellow-300 to-amber-400' : 'bg-gradient-to-br from-indigo-300 to-purple-400'}`}>
+                              {String(result.viralScore).includes('UNVERIFIED') ? (
+                                <>{String(result.viralScore).split('/')[0]}<span className={`text-3xl ${result.analysisMode === 'pensaci-tu' ? 'text-yellow-500/50' : 'text-indigo-500/50'}`}>/100</span></>
+                            <span className={`mt-2 text-sm font-bold uppercase tracking-widest transition-colors ${result.analysisMode === 'pensaci-tu' ? 'text-yellow-300/80 group-hover:text-yellow-200' : 'text-indigo-300/80 group-hover:text-indigo-200'}`}>
+                      <div className={`prose prose-invert max-w-none ${result.analysisMode === 'anti-ai-slop' ? 'prose-red' : result.analysisMode === 'pensaci-tu' ? 'prose-yellow' : 'prose-indigo'}`}>
+                        <Markdown>{result.analysis.replace(/^VIRAL SCORE\n.*?\n\n/m, '')}</Markdown>
+                      {result.searchAnalysis && (
+                            <Markdown>{result.searchAnalysis}</Markdown>
+                      {result.referenceVideoAnalysis && (
+                            <Markdown>{result.referenceVideoAnalysis.considerations}</Markdown>
+                          {result.referenceVideoAnalysis.links && result.referenceVideoAnalysis.links.length > 0 && (
+                              {result.referenceVideoAnalysis.links.map((link, idx) => (
+                      {result.conscienceExamIt && (
+                            <Markdown>{result.conscienceExamIt}</Markdown>
+                      {result.trendHunterReport && (
+                            <Markdown>{result.trendHunterReport}</Markdown>
+                    {result.originalScript && (
+                          <CopyButton text={result.originalScript} />
+                          {result.originalScript}
+                              onClick={() => handleGenerateVoiceover(result?.originalScript || '')}
+                              disabled={isGeneratingVoiceover || !result?.originalScript}
+                  {(result.aiPrompts || result.soraPrompt12s || result.klingPrompt || result.veoPrompt || result.klingPrompt1 || result.veoPrompt1) && (
+                      {result.aiPrompts.includes('PART 1:') && result.aiPrompts.includes('PART 2:') ? (
+                              context={result?.analysis || result?.script || ''}
+                                    <Markdown>{prompt1Analysis.result}</Markdown>
+                              context={result?.analysis || result?.script || ''}
+                                    <Markdown>{prompt2Analysis.result}</Markdown>
+                            context={result?.analysis || result?.script || ''}
+                                  }}>{promptAnalysis.result}</Markdown>
+                  {result.promptNotes && (
+                          <CopyButton text={result.promptNotes} />
+                            <Markdown>{result.promptNotes}</Markdown>
+                  {result?.optimizedPrompt && (
+                              onClick={() => copyToClipboard(result.optimizedPrompt || '')}
+                            value={result.optimizedPrompt}
+                  {result?.publishingKit && (
+                              navigator.clipboard.writeText(result.publishingKit || '');
+                              value={kitLanguage === 'it' ? result.parsedKit?.titleIt : result.parsedKit?.titleEn} 
+                              onCopy={() => handleCopyField('title', kitLanguage === 'it' ? result.parsedKit?.titleIt : result.parsedKit?.titleEn)}
+                              value={kitLanguage === 'it' ? result.parsedKit?.videoHookIt : result.parsedKit?.videoHookEn} 
+                              onCopy={() => handleCopyField('videoHook', kitLanguage === 'it' ? result.parsedKit?.videoHookIt : result.parsedKit?.videoHookEn)}
+                                {(kitLanguage === 'it' ? result.parsedKit?.hooksIt : result.parsedKit?.hooksEn)?.map((hook, i) => (
+                              value={kitLanguage === 'it' ? result.parsedKit?.descriptionIt : result.parsedKit?.descriptionEn} 
+                              onCopy={() => handleCopyField('description', kitLanguage === 'it' ? result.parsedKit?.descriptionIt : result.parsedKit?.descriptionEn)}
+                              value={kitLanguage === 'it' ? result.parsedKit?.hashtagsIt : result.parsedKit?.hashtagsEn} 
+                              onCopy={() => handleCopyField('hashtags', kitLanguage === 'it' ? result.parsedKit?.hashtagsIt : result.parsedKit?.hashtagsEn)}
+                              value={kitLanguage === 'it' ? result.parsedKit?.tagsIt : result.parsedKit?.tagsEn} 
+                              onCopy={() => handleCopyField('tags', kitLanguage === 'it' ? result.parsedKit?.tagsIt : result.parsedKit?.tagsEn)}
+                              value={kitLanguage === 'it' ? result.parsedKit?.pinnedCommentIt : result.parsedKit?.pinnedCommentEn} 
+                              onCopy={() => handleCopyField('pinnedComment', kitLanguage === 'it' ? result.parsedKit?.pinnedCommentIt : result.parsedKit?.pinnedCommentEn)}
+                                value={result.parsedKit?.fileName} 
+                                onCopy={() => handleCopyField('fileName', result.parsedKit?.fileName)}
+                                value={result.parsedKit?.recommendedTime} 
+                                onCopy={() => handleCopyField('recommendedTime', result.parsedKit?.recommendedTime)}
+                              value={kitLanguage === 'it' ? result.parsedKit?.audioMoodIt : result.parsedKit?.audioMoodEn} 
+                              onCopy={() => handleCopyField('audioMood', kitLanguage === 'it' ? result.parsedKit?.audioMoodIt : result.parsedKit?.audioMoodEn)}
+                                {kitLanguage === 'it' ? result.parsedKit?.musicalAnalysisIt : result.parsedKit?.musicalAnalysisEn}
+                                      setCoverReferenceImage(reader.result as string);
+                                  onClick={() => handleCopyField('coverPrompt', result.parsedKit?.coverPrompt)}
+                                value={result.parsedKit?.coverPrompt || ""}
+                                    ...result,
+                                      ...(result.parsedKit || {}),
+                                disabled={isGeneratingCover || !result.parsedKit?.coverPrompt}
+                                {typeof result.parsedKit?.neuroScore === 'object' 
+                                  ? result.parsedKit.neuroScore.score 
+                                  : (result.parsedKit?.neuroScore || 'N/A')}
+                            {typeof result.parsedKit?.neuroScore === 'object' && (
+                                  <div className="text-sm font-black text-pink-400">{String(result.parsedKit.neuroScore.hookRate).includes('UNVERIFIED') ? 'UNVERIFIED' : `${result.parsedKit.neuroScore.hookRate}%`}</div>
+                                  <div className="text-sm font-black text-blue-400">{String(result.parsedKit.neuroScore.retention).includes('UNVERIFIED') ? 'UNVERIFIED' : `${result.parsedKit.neuroScore.retention}%`}</div>
+                                  <div className="text-sm font-black text-amber-400">{String(result.parsedKit.neuroScore.viralPotential).includes('UNVERIFIED') ? 'UNVERIFIED' : `${result.parsedKit.neuroScore.viralPotential}%`}</div>
+                                {result.psychologicalAnalysis || (kitLanguage === 'it' ? result.parsedKit?.neuroExplanationIt : result.parsedKit?.neuroExplanationEn)}
+                              {result.parsedKit?.dopamineHits?.map((hit, i) => (
+                          {(result.conscienceExamIt || result.conscienceExamEn) && (
+                                {kitLanguage === 'it' ? result.conscienceExamIt : result.conscienceExamEn}
+                          {(result.audioAnalysisIt || result.audioAnalysisEn) && (
+                                {kitLanguage === 'it' ? result.audioAnalysisIt : result.audioAnalysisEn}
+                          {(result.researchConsiderationsIt || result.researchConsiderationsEn) && (
+                                {kitLanguage === 'it' ? result.researchConsiderationsIt : result.researchConsiderationsEn}
+                          {result.trendHunterReport && (
+                                {result.trendHunterReport}
+                              {result.publishingKit}
+                  {result && (

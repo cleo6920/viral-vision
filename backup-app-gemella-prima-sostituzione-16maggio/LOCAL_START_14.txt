@@ -1,0 +1,8 @@
+Avvio locale consigliato:
+1. Apri questa cartella.
+2. Crea .env partendo da .env.example e inserisci le chiavi necessarie.
+3. Esegui: npm install
+4. Esegui: npm run dev
+Nota:
+- package-lock.json ? stato sostituito con una copia valida compatibile con questo package.json.
+- il doppione interno di export ? stato rimosso.

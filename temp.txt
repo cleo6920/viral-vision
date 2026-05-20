@@ -1,0 +1,2 @@
+import { StrategicConscience } from './components/conscience/StrategicConscience';
+                            <StrategicConscience result={result} />

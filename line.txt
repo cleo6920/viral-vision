@@ -1,0 +1,8 @@
+import { StrategicConscience } from './components/conscience/StrategicConscience';
+                            <StrategicConscience result={result} />
+import { ComposerConscience } from './components/conscience/ComposerConscience';
+                            <ComposerConscience result={result} />
+          textInput = `PROMPT ORIGINALE DEL VIDEO DA ANALIZZARE:\n${originalPrompt}\n\nDESCRIZIONE AGGIUNTIVA:\n${description}`;
+        const m = promptText?.match(/(?:===|\*\*===|###|\*\*)\s*(?:ANALYSIS|ANALISI STRATEGICA)(?:[^\n]*?)(?:===|\*\*===|\*\*|===|#+)?(.*?)(?=\n\s*(?:===|\*\*===|###|\*\*|<[a-z_]+>)|$)/is);
+                        SBLOCCA ANALISI
+                            {/* ANALISI DI COSCIENZA - CAST & DIALOGHI */}

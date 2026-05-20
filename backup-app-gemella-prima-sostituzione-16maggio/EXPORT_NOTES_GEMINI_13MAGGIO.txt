@@ -1,0 +1,13 @@
+Versione esportata da base locale viral-ultimate-runtime-audit.
+Contiene:
+- Groq Whisper con verbose_json / audio segments
+- OpenRouter Vision fallback 10 frame
+- promptDecisionTrace / Analisi di Coscienza
+- castGroundingAudit
+- castAndDialogueAudit
+- sceneMechanismAudit
+- dialogueSyncAudit
+- UI Esame di Coscienza leggibile
+- nessun node_modules incluso
+- nessun .env incluso
+- chiavi API da impostare nei Secret/Env di Google Studio

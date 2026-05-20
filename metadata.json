@@ -1,0 +1,8 @@
+{
+  "name": "viral-strategy-engine-base-pronta-coscienze-prompt-tabs",
+  "description": "Advanced AI-powered decision engine for viral content strategy. Features forensic video analysis, multi-model prompt engineering, and YouTube market validation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
